@@ -32,7 +32,10 @@
               }
             ],
             "styles": ["src/theme/variables.scss", "src/global.scss"],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/postcode.js",
+              
+            ]
           },
           "configurations": {
             "production": {
@@ -112,7 +115,9 @@
               }
             ],
             "styles": ["src/theme/variables.scss", "src/global.scss"],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/postcode.js"
+            ]
           },
           "configurations": {
             "ci": {
@@ -136,7 +141,8 @@
   "cli": {
     "schematicCollections": [
       "@ionic/angular-toolkit"
-    ]
+    ],
+    "analytics": false
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {

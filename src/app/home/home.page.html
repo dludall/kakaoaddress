@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Daum주소검색
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,30 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Daum주소검색</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-list>
+    <ion-item>
+      <ion-chip  (click)="openDaumPopup()">
+
+        <ion-icon name="search-outline" ></ion-icon>
+        <ion-label>도로명주소</ion-label>
+      </ion-chip>
+      <ion-input #daumaddress [readonly]="true">
+        <div slot="label">주소 <ion-text color="danger">(필수)</ion-text></div>
+      </ion-input>
+
+      <ion-input #daumaddress_detail labelPlacement="상세">
+        <div slot="label">상세주소 <ion-text color="danger">(필수)</ion-text></div>
+      </ion-input>
+  
+      <ion-text >{{fullAddress}}</ion-text>
+    </ion-item>
+  </ion-list>
 </ion-content>
+
+<div #daum_popup style="display:none;position:fixed;overflow:hidden;z-index:1;-webkit-overflow-scrolling:touch;">
+  <img (click)="closePop()" src="//t1.daumcdn.net/postcode/resource/images/close.png" style="cursor:pointer;position:absolute;right:-3px;top:-3px;z-index:1" />
+</div>
