@@ -1,0 +1,7 @@
+{
+  "name": "kakaoaddress",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
