@@ -1,7 +1,7 @@
 
 import { Component, OnInit, ElementRef, ViewChild, Renderer2 } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import 'src/assets/js/postcode.js';
+
 
 // declare function postcode(renderer:any, elem:any, callback:any): void;
 declare function greet(): void;
